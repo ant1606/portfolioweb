@@ -1,9 +1,13 @@
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Kanit } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const kanit = Kanit({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '700'],
+  variable: '--font-kanit'
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} relative`}>
+      <body className={`${kanit.className} relative`}>
         <Navbar />
         <section>
           {children}

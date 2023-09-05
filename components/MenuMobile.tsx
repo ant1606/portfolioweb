@@ -30,13 +30,13 @@ const MenuMobile = ({ isShow, setIsShow }: Props) => {
   return (
     <nav ref={menuRef} className='bg-web-gray w-3/4 fixed right-0 top-0 z-20'>
       <ul className=' bg-web-blue flex flex-col min-h-screen items-center justify-center'>
-        <li className='font-kanit text-2xl text-web-white font-bold leading-snug h-36 min-w-full flex items-center justify-center hover:bg-web-light-blue'>
+        <li className='text-2xl text-web-white font-bold leading-snug h-36 min-w-full flex items-center justify-center hover:bg-web-light-blue'>
           Inicio
         </li>
-        <li className='font-kanit text-2xl text-web-white font-bold leading-snug h-36 min-w-full flex items-center justify-center border-y-4 hover:bg-web-light-blue'>
+        <li className='text-2xl text-web-white font-bold leading-snug h-36 min-w-full flex items-center justify-center border-y-4 hover:bg-web-light-blue'>
           Portafolio
         </li>
-        <li className='font-kanit text-2xl text-web-white font-bold leading-snug h-36 min-w-full flex items-center justify-center hover:bg-web-light-blue'>
+        <li className='text-2xl text-web-white font-bold leading-snug h-36 min-w-full flex items-center justify-center hover:bg-web-light-blue'>
           Contacto
         </li>
       </ul>

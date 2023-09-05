@@ -22,7 +22,7 @@ const config: Config = {
         'web-white': '#FAFAFA',
       },
       fontFamily: {
-        kanit: [ 'Kanit', 'sans-serif'],
+        kanit: ['var(--font-kanit)'],
       },
     },
   },
