@@ -20,7 +20,10 @@ const config: Config = {
         'web-light-gray': '#E2E1E1',
         'web-black': '#0D0D0D',
         'web-white': '#FAFAFA',
-      }
+      },
+      fontFamily: {
+        kanit: [ 'Kanit', 'sans-serif'],
+      },
     },
   },
   plugins: [],
