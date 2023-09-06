@@ -13,10 +13,10 @@ const Navbar = () => {
   return (
     <>
       <nav className='bg-web-blue h-15 sticky top-0 z-10'>
-        <ul className='flex justify-end items-center text-web-white sm:justify-between sm:text-center'>
-          <li className='hidden font-bold text-3xl px-5 py-3 hover:bg-web-light-blue sm:block sm:grow sm:py-7 '>Inicio</li>
-          <li className='hidden font-bold text-3xl px-5 py-3 hover:bg-web-light-blue sm:block sm:grow sm:py-7 '>Portafolio</li>
-          <li className='hidden font-bold text-3xl px-5 py-3 hover:bg-web-light-blue sm:block sm:grow sm:py-7 '>Contacto</li>
+        <ul className='flex justify-end items-center text-web-white sm:justify-between sm:text-center md:justify-end'>
+          <li className='hidden font-bold text-3xl px-5 py-3 hover:bg-web-light-blue sm:block sm:grow sm:py-7 md:grow-0 md:min-w-[12rem]'>Inicio</li>
+          <li className='hidden font-bold text-3xl px-5 py-3 hover:bg-web-light-blue sm:block sm:grow sm:py-7 md:grow-0 md:min-w-[12rem]'>Portafolio</li>
+          <li className='hidden font-bold text-3xl px-5 py-3 hover:bg-web-light-blue sm:block sm:grow sm:py-7 md:grow-0 md:min-w-[12rem]'>Contacto</li>
           <li className='sm:hidden px-5' onClick={handleClickMobileMenu}>
             <IconContext.Provider value={{ size: '3.5em', color: '#FAFAFA' }}>
               <BiMenuAltRight />
