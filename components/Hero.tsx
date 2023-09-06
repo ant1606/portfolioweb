@@ -7,8 +7,8 @@ const Hero = () => {
       <figure>
         <img src="https://picsum.photos/200" alt="mi foto" />
       </figure>
-      <h1 className='font-black text-[2.35rem] md:text-[2.5rem] text-center leading-tight'>Hola, soy
-        <br className='md:hidden' />
+      <h1 className='font-black text-[2.35rem] sm:text-[2.5rem] text-center leading-tight'>Hola, soy
+        <br className='sm:hidden' />
         <strong className='text-web-blue'> Anthony Tasayco</strong>
       </h1>
       <h2 className='font-bold text-[1.5rem] text-center uppercase leading-8'>Desarrollador frontend & backend</h2>
