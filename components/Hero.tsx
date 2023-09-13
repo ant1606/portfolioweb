@@ -13,7 +13,7 @@ const Hero = () => {
       </figure>
       <h1 className='font-black text-[2.35rem] sm:text-[2.5rem] text-center leading-tight sm:order-first sm:col-span-2 md:-order-none md:text-6xl'>Hola, soy
         <br className='sm:hidden' />
-        <strong className='text-web-blue'> Anthony Tasayco</strong>
+        <strong className='text-web-blue'> Anthony Tasayco Pachas</strong>
       </h1>
       <div className='flex flex-col gap-10 justify-between items-center sm:h-full md:gap-12'>
         <h2
