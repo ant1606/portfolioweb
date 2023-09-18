@@ -10,7 +10,7 @@ const SkillsCard: React.FC<Props> = ({ image, alt, name }) => {
   return (
     <div
       className='border-2 pt-4 border-web-white rounded-xl overflow-hidden  flex flex-col gap-3 
-        sm:w-[250px]'
+        sm:w-[250px] md:w-[200px]'
     >
       <div className='relative h-36'>
         <Image alt={alt} src={image} fill={true} className='object-scale-down' />
