@@ -23,7 +23,7 @@ const Hero = () => {
         </h2>
         <button
           className='font-bold text-[1.5rem] text-white bg-web-blue rounded-tl-3xl rounded-br-3xl py-2.5 min-w-full 
-        hover:bg-web-light-blue md:text-3xl md:min-w-fit md:px-20 md:py-6'>
+        md:text-3xl md:min-w-fit md:px-20 md:py-6 btn_cta'>
           Contáctame
         </button>
       </div>
@@ -32,3 +32,5 @@ const Hero = () => {
 }
 
 export default Hero
+
+// hover:bg-web-light-blue 
