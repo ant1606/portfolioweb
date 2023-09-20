@@ -1,9 +1,9 @@
 import React from 'react'
-import contactImage from '@/public/contact_image.png';
+import contactImage from '@/public/contact_image.svg';
 import Image from 'next/image';
 const Contact = () => {
   return (
-    <section className='my-16'>
+    <section id="contact" className='my-16'>
       <h1 className='font-black text-[2.35rem] sm:text-[2.5rem] text-center leading-tight lg:text-6xl mb-8'>
         Dejame un mensaje
       </h1>

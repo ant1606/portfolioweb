@@ -9,9 +9,9 @@ import Image from 'next/image';
 const Projects = () => {
   //TODO agregar imagenes y estilizarlas
   return (
-    <section
-      className='mt-5 min-w-full flex flex-col gap-10 items-center'>
-      <h1 className='font-black text-[2.35rem] sm:text-[2.5rem] text-center leading-tight sm:order-first sm:col-span-2 lg:-order-none lg:text-6xl'>
+    <section id="portafolio"
+      className='min-w-full flex flex-col gap-10 items-center'>
+      <h1 className='mt-20 font-black text-[2.35rem] sm:text-[2.5rem] text-center leading-tight sm:order-first sm:col-span-2 lg:-order-none lg:text-6xl'>
         Mis Proyectos
       </h1>
       {/* Listado de Proyectos */}

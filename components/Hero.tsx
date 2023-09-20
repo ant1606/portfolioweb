@@ -4,7 +4,7 @@ import React from 'react'
 const Hero = () => {
   //TODO Agregar imagen en Hero
   return (
-    <section
+    <section id="home"
       className='pt-5 sm:pt-14 min-w-full flex flex-col gap-10 items-center 
                 sm:grid sm:grid-cols-2 md:flex md:gap-12'>
       <figure className='flex justify-center' >
