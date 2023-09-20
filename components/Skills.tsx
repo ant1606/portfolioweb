@@ -17,6 +17,7 @@ import digitalOceanLogo from '@/public/digitalocean_logo.svg';
 
 import SkillCarrousel from './SkillCarrousel';
 import SkillsCard from './SkillsCard';
+import Typography from './Typography';
 
 const Skills = () => {
   const logosFrontEnd = [{
@@ -106,10 +107,15 @@ const Skills = () => {
 
   return (
     <section className='uppercase text-[1.5rem] font-bold flex flex-col items-center mt-16 min-w-full gap-14'>
-      <h2 className='normal-case font-black text-[2.35rem] text-center'>Mis Habilidades</h2>
+      {/* <h2 className='normal-case font-black text-[2.35rem] text-center'>Mis Habilidades</h2> */}
+      <Typography variant='h1' className="normal-case">
+        Mis Habilidades
+      </Typography>
       <div className="flex flex-col md:flex-row md:justify-around md:w-full md:flex-wrap ">
         <article className="flex flex-col min-w-full items-center overflow-hidden md:min-w-fit">
-          <h3>front-end</h3>
+          <Typography variant='h2'>
+            front-end
+          </Typography>
           <div className='w-full flex flex-col gap-8 sm:flex-row  sm:flex-wrap sm:justify-center md:flex-col'>
             {logosFrontEnd.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
@@ -118,7 +124,9 @@ const Skills = () => {
           </div>
         </article>
         <article className="flex flex-col  min-w-full items-center overflow-hidden md:min-w-fit">
-          <h3>back-end</h3>
+          <Typography variant='h2'>
+            back-end
+          </Typography>
           <div className='w-full flex flex-col gap-8 sm:flex-row sm:flex-wrap sm:justify-center md:flex-col'>
             {logosBackEnd.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
@@ -127,7 +135,9 @@ const Skills = () => {
           </div>
         </article>
         <article className="flex flex-col  min-w-full items-center overflow-hidden md:min-w-fit">
-          <h3>bases de datos</h3>
+          <Typography variant='h2'>
+            bases de datos
+          </Typography>
           <div className='w-full flex flex-col gap-8  sm:flex-row  sm:flex-wrap sm:justify-center md:flex-col'>
             {logosDatabase.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
@@ -136,7 +146,9 @@ const Skills = () => {
           </div>
         </article>
         <article className="flex flex-col  min-w-full items-center overflow-hidden md:min-w-fit">
-          <h3>Testing</h3>
+          <Typography variant='h2'>
+            Testing
+          </Typography>
           <div className='w-full flex flex-col gap-8  sm:flex-row  sm:flex-wrap sm:justify-center md:flex-col'>
             {logosTesting.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
@@ -145,7 +157,9 @@ const Skills = () => {
           </div>
         </article>
         <article className="flex flex-col  min-w-full items-center overflow-hidden md:min-w-fit">
-          <h3>Servidores</h3>
+          <Typography variant='h2'>
+            Servidores
+          </Typography>
           <div className='w-full flex flex-col gap-8  sm:flex-row  sm:flex-wrap sm:justify-center md:flex-col'>
             {logosServer.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />

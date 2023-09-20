@@ -6,14 +6,15 @@ import { SiJavascript, SiDocker, SiHtml5, SiTailwindcss, SiCss3, SiLaravel, SiPh
 import { IconContext } from 'react-icons';
 import noImage from '@/public/no_image.jpg';
 import Image from 'next/image';
+import Typography from './Typography';
 const Projects = () => {
   //TODO agregar imagenes y estilizarlas
   return (
     <section id="portafolio"
       className='min-w-full flex flex-col gap-10 items-center'>
-      <h1 className='mt-20 font-black text-[2.35rem] sm:text-[2.5rem] text-center leading-tight sm:order-first sm:col-span-2 lg:-order-none lg:text-6xl'>
+      <Typography variant="h1" className="mt-20 sm:order-first sm:col-span-2 lg:-order-none">
         Mis Proyectos
-      </h1>
+      </Typography>
       {/* Listado de Proyectos */}
       <div className='flex flex-col gap-8 sm:bg-web-blue sm:p-3 '>
 

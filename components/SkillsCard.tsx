@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
 import React from 'react'
+import Typography from './Typography';
 
 interface Props {
   image: StaticImageData;
@@ -16,7 +17,7 @@ const SkillsCard: React.FC<Props> = ({ image, alt, name }) => {
         <Image alt={alt} src={image} fill={true} className='object-scale-down' />
       </div>
       <div className="bg-web-blue text-web-white text-center h-10">
-        <p>{name}</p>
+        <Typography variant='p'>{name}</Typography>
       </div>
     </div>
   )
