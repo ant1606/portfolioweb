@@ -12,9 +12,9 @@ const Typography: React.FC<TypographyProps> = ({ variant, children, className })
 
     switch (variant) {
       case 'h1':
-        return <h1 className={`font-black text-[2.5rem] ${className}`}>{children}</h1>;
+        return <h1 className={`font-black text-[2.35rem] sm:text-[2.5rem]  text-center leading-tight md:text-6xl ${className}`}>{children}</h1>;
       case 'h2':
-        return <h2 className={`${className}`}>{children}</h2>;
+        return <h2 className={`font-bold text-[1.5rem] text-center leading-8  md:text-5xl ${className}`}>{children}</h2>;
       case 'h3':
         return <h3 className={`${className}`}>{children}</h3>;
       case 'h4':

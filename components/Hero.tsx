@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Typography from './Typography'
 
 const Hero = () => {
   //TODO Agregar imagen en Hero
@@ -11,16 +12,13 @@ const Hero = () => {
         {/* <Image width={200} height={200} src="https://picsum.photos/200" alt="mi foto" /> */}
         <img src="https://picsum.photos/200" alt="mi foto" />
       </figure>
-      <h1 className='font-black text-[2.35rem] sm:text-[2.5rem] text-center leading-tight sm:order-first sm:col-span-2 md:-order-none md:text-6xl'>Hola, soy
-        <br className='sm:hidden' />
-        <strong className='text-web-blue'> Anthony Tasayco Pachas</strong>
-      </h1>
+      <Typography variant="h1" className="text-web-dark sm:order-first sm:col-span-2 md:-order-none  ">
+        Hola, soy <br className='sm:hidden' /> <Typography variant="strong" className="text-web-blue">Anthony Tasayco Pachas</Typography>
+      </Typography>
       <div className='flex flex-col gap-10 justify-between items-center sm:h-full md:gap-12'>
-        <h2
-          className='font-bold text-[1.5rem] text-center uppercase leading-8 
-        grow flex items-end md:text-5xl md:font-light'>
+        <Typography variant='h2' className='uppercase grow flex items-end md:font-light'>
           Desarrollador frontend & backend
-        </h2>
+        </Typography>
         <button
           className='font-bold text-[1.5rem] text-white bg-web-blue rounded-tl-3xl rounded-br-3xl py-2.5 min-w-full 
         md:text-3xl md:min-w-fit md:px-20 md:py-6 btn_cta'>
@@ -32,5 +30,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-// hover:bg-web-light-blue 
