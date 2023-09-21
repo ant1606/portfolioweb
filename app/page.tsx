@@ -3,6 +3,7 @@ import Hero from '@/components/Hero'
 import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
+import GoUp from '@/components/GoUp'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Contact />
+      <GoUp />
     </main>
   )
 }

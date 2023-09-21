@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${kanit.className} relative no-scrollbar`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${kanit.className} relative no-scrollbar `}>
         <Navbar />
         <section>
           {children}
