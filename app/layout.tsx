@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Kanit } from 'next/font/google'
+import Script from 'next/script'
 
 const kanit = Kanit({
   subsets: ['latin'],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <section>
           {children}
         </section>
+        <Script src="https://smtpjs.com/v3/smtp.js"></Script>
       </body>
     </html>
   )
