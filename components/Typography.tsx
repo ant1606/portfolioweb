@@ -16,7 +16,7 @@ const Typography: React.FC<TypographyProps> = ({ variant, children, className })
       case 'h2':
         return <h2 className={`font-bold text-center leading-8 text-[1.75rem] sm:text-[2rem] md:text-5xl ${className}`}>{children}</h2>;
       case 'h3':
-        return <h3 className={`${className}`}>{children}</h3>;
+        return <h3 className={`font-extrabold text-center text-2xl leading-normal  ${className}`}>{children}</h3>;
       case 'h4':
         return <h4 className={`${className}`}>{children}</h4>;
       case 'h5':
