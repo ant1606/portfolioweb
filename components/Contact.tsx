@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Typography from './Typography';
 import emailjs from '@emailjs/browser';
 import { ErrorMessage, Field, Form, Formik, FormikBag, useFormik } from 'formik';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface FormValues {
   from_name: string;
@@ -63,20 +65,45 @@ const Contact = () => {
   };
   return (
     <section id="contact" className='my-16'>
+      <ToastContainer />
       <Typography variant='h1' className='mb-8'>Dejame un mensaje</Typography>
       <div className='flex'>
         <Formik
           initialValues={initialValues}
           validate={validate}
           onSubmit={(values, actions) => {
-            console.log("Formulario enviado", values);
-            alert("Tu mensaje fue enviado");
-            //actions recibe el formikBag que trae diversos props de formik
-            // https://formik.org/docs/api/withFormik#handlesubmit-values-values-formikbag-formikbag--void--promiseany
-            actions.resetForm();
+            emailjs.sendForm('service_s8qbubv', 'template_09dpchi', form.current as HTMLFormElement, 'YJWd6PBfNY7eF35dM')
+              .then((result) => {
+                toast.success('Gracias! Tu mensaje ha sido enviado.', {
+                  position: toast.POSITION.TOP_RIGHT,
+                  autoClose: 5000,
+                  hideProgressBar: true,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
+                });
+                //actions recibe el formikBag que trae diversos props de formik
+                // https://formik.org/docs/api/withFormik#handlesubmit-values-values-formikbag-formikbag--void--promiseany
+                actions.resetForm();
+              }, (error) => {
+                toast.error('Oh no! No se pudo enviar tu mensaje, intentalo más tarde.', {
+                  position: toast.POSITION.TOP_RIGHT,
+                  autoClose: 5000,
+                  hideProgressBar: true,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
+                });
+                //TODO Hacer que me envie un mensaje de error o escriba en un log
+                console.log(error.text);
+              });
           }}
         >
-          {() => (
+          {({ isSubmitting }) => (
             <Form className="flex flex-col gap-2" ref={form}>
               <div className='min-h-[95px]'>
                 <Typography variant='label' className='text-web-blue' htmlFor='from_name'>Tu nombre</Typography>
@@ -117,6 +144,7 @@ const Contact = () => {
           <Image src={contactImage} alt={"imagen de contacto"} className='hidden lg:block' />
         </figure>
       </div>
+
     </section>
   )
 }
