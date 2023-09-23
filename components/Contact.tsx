@@ -4,7 +4,7 @@ import contactImage from '@/public/contact_image.svg';
 import Image from 'next/image';
 import Typography from './Typography';
 import emailjs from '@emailjs/browser';
-import { ErrorMessage, Field, Form, Formik, useFormik } from 'formik';
+import { ErrorMessage, Field, Form, Formik, FormikBag, useFormik } from 'formik';
 
 interface FormValues {
   from_name: string;
@@ -17,7 +17,6 @@ const initialValues: FormValues = {
   from_email: '',
   message: '',
 };
-
 
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -33,11 +32,11 @@ const Contact = () => {
   //     });
   // };
 
-  const handleSubmit = (values: FormValues) => {
-    console.log('Formulario enviado:', values);
-    console.log(form.current);
-    // Aquí puedes agregar la lógica para enviar el formulario
-  };
+  // const handleSubmit = (values: FormValues, formikBag: FormikBag) => {
+  //   console.log('Formulario enviado:', values);
+  //   console.log(form.current);
+  //   formikBag.resetForm();
+  // };
 
   const validate = (values: FormValues) => {
     const errors: Partial<FormValues> = {};
@@ -69,7 +68,13 @@ const Contact = () => {
         <Formik
           initialValues={initialValues}
           validate={validate}
-          onSubmit={handleSubmit}
+          onSubmit={(values, actions) => {
+            console.log("Formulario enviado", values);
+            alert("Tu mensaje fue enviado");
+            //actions recibe el formikBag que trae diversos props de formik
+            // https://formik.org/docs/api/withFormik#handlesubmit-values-values-formikbag-formikbag--void--promiseany
+            actions.resetForm();
+          }}
         >
           {() => (
             <Form className="flex flex-col gap-2" ref={form}>
