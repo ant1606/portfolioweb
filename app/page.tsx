@@ -8,11 +8,11 @@ import GoUp from '@/components/GoUp'
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between px-6">
+      <GoUp />
       <Hero />
       <Skills />
       <Projects />
       <Contact />
-      <GoUp />
     </main>
   )
 }

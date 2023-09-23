@@ -4,9 +4,10 @@ interface TypographyProps {
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'strong' | 'label';
   children: ReactNode;
   className?: string;
+  htmlFor?: string;
 }
 
-const Typography: React.FC<TypographyProps> = ({ variant, children, className }) => {
+const Typography: React.FC<TypographyProps> = ({ variant, children, className, htmlFor }) => {
   const renderTypography = () => {
     const classNames = `typography ${className || ''}`;
 
@@ -28,7 +29,7 @@ const Typography: React.FC<TypographyProps> = ({ variant, children, className })
       case 'span':
         return <span className={`${className}`}>{children}</span>;
       case 'label':
-        return <span className={`text-2xl font-extrabold text-center  leading-normal ${className}`}>{children}</span>;
+        return <label className={`text-2xl font-extrabold text-center  leading-normal ${className}`} htmlFor={htmlFor}>{children}</label>;
       case 'strong':
         return <strong className={`${className}`}>{children}</strong>;
       default:
