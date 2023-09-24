@@ -107,64 +107,62 @@ const Skills = () => {
 
   return (
     <section className='uppercase text-[1.5rem] font-bold flex flex-col items-center mt-16 min-w-full gap-14'>
-      {/* <h2 className='normal-case font-black text-[2.35rem] text-center'>Mis Habilidades</h2> */}
       <Typography variant='h1' className="normal-case">
         Mis Habilidades
       </Typography>
-      <div className="flex flex-col md:flex-row md:justify-around md:w-full md:flex-wrap ">
-        <article className="flex flex-col min-w-full items-center overflow-hidden md:min-w-fit">
-          <Typography variant='h2'>
+      <div className='w-full flex flex-col gap-16'>
+        <article className="flex flex-col bg-web-white rounded-xl shadow-xl gap-8 py-5">
+          <Typography variant='h2' className='bg-clip-text text-transparent bg-gradient-to-r from-web-light-blue from-35% to-web-blue to-80%'>
             front-end
           </Typography>
-          <div className='w-full flex flex-col gap-8 sm:flex-row  sm:flex-wrap sm:justify-center md:flex-col'>
+          <div className='w-full flex flex-wrap justify-center h-full gap-5 items-center'>
             {logosFrontEnd.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
             )}
-            {/* <SkillCarrousel arrayLogos={logosFrontEnd} /> */}
           </div>
         </article>
-        <article className="flex flex-col  min-w-full items-center overflow-hidden md:min-w-fit">
-          <Typography variant='h2'>
+
+        <article className="flex flex-col bg-web-white rounded-xl shadow-xl gap-8 py-5">
+          <Typography variant='h2' className='bg-clip-text text-transparent bg-gradient-to-r from-web-light-blue from-35% to-web-blue to-80%'>
             back-end
           </Typography>
-          <div className='w-full flex flex-col gap-8 sm:flex-row sm:flex-wrap sm:justify-center md:flex-col'>
+          <div className='w-full flex flex-wrap justify-center h-full gap-5 items-center'>
             {logosBackEnd.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
             )}
-            {/* <SkillCarrousel arrayLogos={logosBackEnd} /> */}
           </div>
         </article>
-        <article className="flex flex-col  min-w-full items-center overflow-hidden md:min-w-fit">
-          <Typography variant='h2'>
+
+        <article className="flex flex-col bg-web-white rounded-xl shadow-xl gap-8 py-5">
+          <Typography variant='h2' className='bg-clip-text text-transparent bg-gradient-to-r from-web-light-blue from-35% to-web-blue to-80%'>
             bases de datos
           </Typography>
-          <div className='w-full flex flex-col gap-8  sm:flex-row  sm:flex-wrap sm:justify-center md:flex-col'>
+          <div className='w-full flex flex-wrap justify-center h-full gap-5 items-center'>
             {logosDatabase.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
             )}
-            {/* <SkillCarrousel arrayLogos={logosDatabase} /> */}
           </div>
         </article>
-        <article className="flex flex-col  min-w-full items-center overflow-hidden md:min-w-fit">
-          <Typography variant='h2'>
+
+        <article className="flex flex-col bg-web-white rounded-xl shadow-xl gap-8 py-5">
+          <Typography variant='h2' className='bg-clip-text text-transparent bg-gradient-to-r from-web-light-blue from-35% to-web-blue to-80%'>
             Testing
           </Typography>
-          <div className='w-full flex flex-col gap-8  sm:flex-row  sm:flex-wrap sm:justify-center md:flex-col'>
+          <div className='w-full flex flex-wrap justify-center h-full gap-5 items-center'>
             {logosTesting.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
             )}
-            {/* <SkillCarrousel arrayLogos={logosTesting} /> */}
           </div>
         </article>
-        <article className="flex flex-col  min-w-full items-center overflow-hidden md:min-w-fit">
-          <Typography variant='h2'>
+
+        <article className="flex flex-col bg-web-white rounded-xl shadow-xl gap-8 py-5">
+          <Typography variant='h2' className='bg-clip-text text-transparent bg-gradient-to-r from-web-light-blue from-35% to-web-blue to-80%'>
             Servidores
           </Typography>
-          <div className='w-full flex flex-col gap-8  sm:flex-row  sm:flex-wrap sm:justify-center md:flex-col'>
+          <div className='w-full flex flex-wrap justify-center h-full gap-5 items-center'>
             {logosServer.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
             )}
-            {/* <SkillCarrousel arrayLogos={logosServer} /> */}
           </div>
         </article>
       </div>
