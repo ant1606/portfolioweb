@@ -18,6 +18,10 @@ const MenuMobile = ({ isShow, setIsShow }: Props) => {
     }
   };
 
+  const closeMenuMobile = () => {
+    setIsShow(false);
+  }
+
   useEffect(() => {
     // Agregar un event listener para detectar clics en el documento
     document.addEventListener('mousedown', handleClickOutside);
@@ -29,15 +33,27 @@ const MenuMobile = ({ isShow, setIsShow }: Props) => {
   }, []);
 
   return (
-    <nav ref={menuRef} className='bg-web-gray w-3/4 fixed right-0 top-0 z-20'>
+    <nav ref={menuRef} className={`bg-web-gray fixed  z-20 top-0 transition-all ease-out delay-200 duration-700 ${isShow ? 'w-3/4 right-0 ' : 'w-0 -right-20 pointer-events-none'}`}>
       <ul className=' bg-web-blue flex flex-col min-h-screen items-center justify-center'>
-        <Link href="#home" className='text-2xl text-web-white font-bold leading-snug h-36 min-w-full flex items-center justify-center hover:bg-web-light-blue'>
+        <Link
+          href="#home"
+          className='text-2xl text-web-white font-bold leading-snug h-36 min-w-full flex items-center justify-center hover:bg-web-light-blue transition-colors delay-400 ease-out'
+          onClick={closeMenuMobile}
+        >
           Inicio
         </Link>
-        <Link href="#portafolio" className='text-2xl text-web-white font-bold leading-snug h-36 min-w-full flex items-center justify-center hover:bg-web-light-blue'>
+        <Link
+          href="#portafolio"
+          className='text-2xl text-web-white font-bold leading-snug h-36 min-w-full flex items-center justify-center hover:bg-web-light-blue transition-colors delay-400 ease-out'
+          onClick={closeMenuMobile}
+        >
           Portafolio
         </Link>
-        <Link href="#contact" className='text-2xl text-web-white font-bold leading-snug h-36 min-w-full flex items-center justify-center hover:bg-web-light-blue'>
+        <Link
+          href="#contact"
+          className='text-2xl text-web-white font-bold leading-snug h-36 min-w-full flex items-center justify-center hover:bg-web-light-blue transition-colors delay-400 ease-out'
+          onClick={closeMenuMobile}
+        >
           Contacto
         </Link>
       </ul>

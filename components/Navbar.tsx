@@ -44,18 +44,22 @@ const Navbar = () => {
           {/* <li className='hidden font-bold text-3xl px-5 py-3 hover:bg-web-light-blue sm:block sm:grow sm:py-7 md:grow-0 md:min-w-[12rem]'>Inicio</li>
           <li className='hidden font-bold text-3xl px-5 py-3 hover:bg-web-light-blue sm:block sm:grow sm:py-7 md:grow-0 md:min-w-[12rem]'>Portafolio</li>
           <li className='hidden font-bold text-3xl px-5 py-3 hover:bg-web-light-blue sm:block sm:grow sm:py-7 md:grow-0 md:min-w-[12rem]'>Contacto</li> */}
-          <li className='sm:hidden px-5' onClick={handleClickMobileMenu}>
+          <li className='sm:hidden px-5 hover:[transform:rotateY(180deg)] transition-all ease-in-out duration-500' onClick={handleClickMobileMenu}>
             <IconContext.Provider value={{ size: '3.5em', color: '#FAFAFA' }}>
               <BiMenuAltRight />
             </IconContext.Provider>
           </li>
         </ul>
       </nav >
-      {showMobileMenu &&
-        <MenuMobile isShow={showMobileMenu} setIsShow={setShowMobileMenu} />
-      }
+
+      <MenuMobile isShow={showMobileMenu} setIsShow={setShowMobileMenu} />
+
     </>
   )
 }
 
 export default Navbar
+
+// {showMobileMenu &&
+//   <MenuMobile isShow={showMobileMenu} setIsShow={setShowMobileMenu} />
+// }
