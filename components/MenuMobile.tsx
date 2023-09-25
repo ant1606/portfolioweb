@@ -1,22 +1,29 @@
 'use client'
 import Link from 'next/link';
-import React, { useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 
 interface Props {
   isShow: boolean;
   setIsShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 const MenuMobile = ({ isShow, setIsShow }: Props) => {
-  const menuRef = useRef(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
-  const handleClickOutside = (e) => {
-    if (menuRef.current && !menuRef.current.contains(e.target)) {
+  // const handleClickOutside = (e: MouseEvent) => {
+  //   if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+  //     // Si el clic ocurrió fuera del menú, ocultar el menú
+  //     // setShowMenu(false);
+  //     setIsShow(false);
+  //   }
+  // };
+
+  const handleClickOutside = useCallback((e: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
       // Si el clic ocurrió fuera del menú, ocultar el menú
       // setShowMenu(false);
       setIsShow(false);
-      console.log("Click fuera del menu mobile");
     }
-  };
+  }, [setIsShow]);
 
   const closeMenuMobile = () => {
     setIsShow(false);
@@ -30,7 +37,7 @@ const MenuMobile = ({ isShow, setIsShow }: Props) => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, [handleClickOutside]);
 
   return (
     <nav ref={menuRef} className={`bg-web-gray fixed  z-20 top-0 transition-all ease-out delay-200 duration-700 ${isShow ? 'w-3/4 right-0 ' : 'w-0 -right-20 pointer-events-none'}`}>
