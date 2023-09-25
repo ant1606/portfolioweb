@@ -86,7 +86,7 @@ const Contact = () => {
                   progress: undefined,
                   theme: "light",
                 });
-                //TODO Hacer que me envie un mensaje de error o escriba en un log
+                //TODO Hacer que me envie escriba en un log
                 console.log(error.text);
               });
           }}
