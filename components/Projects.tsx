@@ -1,10 +1,9 @@
 'use client';
 import React from 'react'
 import Typography from './Typography';
-import ProjectItem from './ProjectItem';
+import ProjectItem, { Project } from './ProjectItem';
 import noImage from '@/public/no_image.jpg';
-//TODO TIpar la constante de projects para que el array technologies solo pueda usar el que se especifica para los iconos
-const projects = [
+const projects: Project[] = [
   {
     title: "Gestor de Recursos Educativos",
     image: noImage,
@@ -23,14 +22,12 @@ const projects = [
   }
 ]
 const Projects = () => {
-  //TODO agregar imagenes y estilizarlas
   return (
     <section id="portafolio"
       className='min-w-full flex flex-col gap-10 items-center'>
       <Typography variant="h1" className="mt-20 sm:order-first sm:col-span-2 lg:-order-none">
         Mis Proyectos
       </Typography>
-      {/* Listado de Proyectos */}
       <div className='flex flex-col gap-8 sm:bg-web-blue sm:p-3 '>
         {projects.map(project =>
           <ProjectItem
@@ -43,10 +40,8 @@ const Projects = () => {
             description={project.description}
           />
         )}
-
       </div>
     </section>
-
   )
 }
 

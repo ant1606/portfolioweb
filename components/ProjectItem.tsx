@@ -3,19 +3,19 @@ import Typography from './Typography'
 import Image, { StaticImageData } from 'next/image'
 import { IconContext } from 'react-icons'
 import { TbWorld } from 'react-icons/tb'
-// import { BsFillEyeFill } from 'react-icons/bs'
 import { SiJavascript, SiDocker, SiHtml5, SiTailwindcss, SiCss3, SiLaravel, SiPhp, SiGithub, SiReact, SiTypescript, SiMysql, SiMicrosoftsqlserver, SiPostman, SiMongodb } from "react-icons/si";
 import Link from 'next/link'
+
 export interface Project {
   title: string;
   image: StaticImageData;
   link: string;
-  technologies: Array<TechnologiesOptions>;
+  technologies: TechnologiesOptions[];
   githubRepo: string;
   description: string;
 }
 
-type TechnologiesOptions = 'javascript' | 'docker' | 'html' | 'tailwind' | 'css' | 'laravel' | 'php';
+type TechnologiesOptions = 'javascript' | 'docker' | 'html' | 'tailwind' | 'css' | 'laravel' | 'php' | 'react' | 'typescript' | 'mysql' | 'mongo';
 // https://react-icons.github.io/react-icons/icons?name=si
 const technologyIcons = {
   javascript: <SiJavascript />,
@@ -58,7 +58,6 @@ const ProjectItem: React.FC<Project> = ({
             <Link href={githubRepo} target='_blank'>
               <SiGithub />
             </Link>
-            {/* <BsFillEyeFill /> */}
           </IconContext.Provider>
         </div>
       </div>
@@ -69,13 +68,6 @@ const ProjectItem: React.FC<Project> = ({
             {technologies.map((technology, index) => (
               <div key={index}>{technologyIcons[technology]}</div>
             ))}
-            {/* <SiJavascript />
-            <SiDocker />
-            <SiHtml5 />
-            <SiTailwindcss />
-            <SiCss3 />
-            <SiLaravel />
-            <SiPhp /> */}
           </div>
         </IconContext.Provider>
 
