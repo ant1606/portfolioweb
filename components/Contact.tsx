@@ -23,23 +23,6 @@ const initialValues: FormValues = {
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
 
-  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-
-  //   emailjs.sendForm('service_s8qbubv', 'template_09dpchi', form.current as HTMLFormElement, 'YJWd6PBfNY7eF35dM')
-  //     .then((result) => {
-  //       console.log(result.text);
-  //     }, (error) => {
-  //       console.log(error.text);
-  //     });
-  // };
-
-  // const handleSubmit = (values: FormValues, formikBag: FormikBag) => {
-  //   console.log('Formulario enviado:', values);
-  //   console.log(form.current);
-  //   formikBag.resetForm();
-  // };
-
   const validate = (values: FormValues) => {
     const errors: Partial<FormValues> = {};
 
@@ -64,10 +47,10 @@ const Contact = () => {
     return errors;
   };
   return (
-    <section id="contact" className='my-16'>
+    <section id="contact" className='my-16 w-full'>
       <ToastContainer />
       <Typography variant='h1' className='mb-8'>Dejame un mensaje</Typography>
-      <div className='flex'>
+      <div className='flex justify-between'>
         <Formik
           initialValues={initialValues}
           validate={validate}
@@ -104,13 +87,13 @@ const Contact = () => {
           }}
         >
           {({ isSubmitting }) => (
-            <Form className="flex flex-col gap-2" ref={form}>
+            <Form className="flex flex-col gap-2 w-full lg:basis-2/4" ref={form}>
               <div className='min-h-[95px]'>
                 <Typography variant='label' className='text-web-blue' htmlFor='from_name'>Tu nombre</Typography>
                 <Field
                   type="text"
                   name="from_name"
-                  className='min-w-full rounded-2xl border-web-blue border-2 px-6 text-xl'
+                  className='w-full rounded-2xl border-web-blue border-2 px-6 text-xl'
                 />
                 <ErrorMessage name="from_name" component="div" className='text-red-700 font-bold text-base' />
               </div>
@@ -119,7 +102,7 @@ const Contact = () => {
                 <Field
                   type="email"
                   name="from_email"
-                  className='min-w-full rounded-2xl border-web-blue border-2 px-6 text-xl'
+                  className='w-full rounded-2xl border-web-blue border-2 px-6 text-xl'
                 />
                 <ErrorMessage name="from_email" component="div" className='text-red-700 font-bold text-base' />
               </div>
@@ -128,21 +111,21 @@ const Contact = () => {
                 <Field
                   as="textarea"
                   name="message"
-                  className='min-w-full rounded-2xl border-web-blue border-2 px-6 text-xl'
+                  className='w-full rounded-2xl border-web-blue border-2 px-6 text-xl'
                   rows={3}
                 />
                 <ErrorMessage name="message" component="div" className='text-red-700 font-bold text-base' />
               </div>
-              <button type='submit' className='bg-web-blue text-white font-extrabold text-2xl rounded-full w-full py-2 sm:w-fit sm:self-end sm:py-1 sm:px-20 cursor-pointer'>
+              <button type='submit' className='bg-web-blue hover:bg-web-light-blue transition-colors ease-linear duration-300 text-white font-extrabold text-2xl rounded-full w-full py-2 sm:w-fit sm:self-end sm:py-1 sm:px-20 cursor-pointer'>
                 Enviar
               </button>
             </Form>
           )}
         </Formik>
 
-        <figure>
-          <Image src={contactImage} alt={"imagen de contacto"} className='hidden lg:block' />
-        </figure>
+        <div className='relative hidden lg:block lg:basis-2/4'>
+          <Image src={contactImage} alt={"imagen de contacto"} fill={true} className='object-scale-fill' />
+        </div>
       </div>
 
     </section>
