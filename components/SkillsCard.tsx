@@ -11,14 +11,14 @@ const SkillsCard: React.FC<Props> = ({ image, alt, name }) => {
   return (
     <div
       className='rounded-xl overflow-hidden flex flex-col gap-1
-        w-[120px] h-[120px] sm:w-[250px] md:w-[200px] hover:shadow-lg relative'
+        w-[120px] h-[120px] sm:w-[180px] md:w-[200px] hover:shadow-lg relative group'
     >
       <div className='relative h-full w-full mb-10'>
         <Image alt={alt} src={image} fill={true} className='object-scale-down' />
       </div>
       <div
         className="bg-web-blue text-web-white h-8 flex justify-center items-center w-full px-1 absolute bottom-0 transition-all ease-out delay-300 
-        group hover:h-16 sm:hover:h-12"
+        group-hover:h-16 sm:group-hover:h-12"
       >
         <Typography
           variant='p'

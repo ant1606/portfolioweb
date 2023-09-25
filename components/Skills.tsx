@@ -104,6 +104,7 @@ const Skills = () => {
   }];
 
 
+  //TODO Modularizar articles de Skills
 
   return (
     <section className='uppercase text-[1.5rem] font-bold flex flex-col items-center mt-16 min-w-full gap-14'>
@@ -115,7 +116,7 @@ const Skills = () => {
           <Typography variant='h2' className='bg-clip-text text-transparent bg-gradient-to-r from-web-light-blue from-35% to-web-blue to-80%'>
             front-end
           </Typography>
-          <div className='w-full flex flex-wrap justify-center h-full gap-5 items-center'>
+          <div className='w-full flex flex-wrap justify-center h-full gap-5 md:gap-10 items-center'>
             {logosFrontEnd.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
             )}
@@ -126,7 +127,7 @@ const Skills = () => {
           <Typography variant='h2' className='bg-clip-text text-transparent bg-gradient-to-r from-web-light-blue from-35% to-web-blue to-80%'>
             back-end
           </Typography>
-          <div className='w-full flex flex-wrap justify-center h-full gap-5 items-center'>
+          <div className='w-full flex flex-wrap justify-center h-full gap-5 md:gap-10 items-center'>
             {logosBackEnd.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
             )}
@@ -137,7 +138,7 @@ const Skills = () => {
           <Typography variant='h2' className='bg-clip-text text-transparent bg-gradient-to-r from-web-light-blue from-35% to-web-blue to-80%'>
             bases de datos
           </Typography>
-          <div className='w-full flex flex-wrap justify-center h-full gap-5 items-center'>
+          <div className='w-full flex flex-wrap justify-center h-full gap-5 md:gap-10 items-center'>
             {logosDatabase.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
             )}
@@ -148,7 +149,7 @@ const Skills = () => {
           <Typography variant='h2' className='bg-clip-text text-transparent bg-gradient-to-r from-web-light-blue from-35% to-web-blue to-80%'>
             Testing
           </Typography>
-          <div className='w-full flex flex-wrap justify-center h-full gap-5 items-center'>
+          <div className='w-full flex flex-wrap justify-center h-full gap-5 md:gap-10 items-center'>
             {logosTesting.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
             )}
@@ -159,7 +160,7 @@ const Skills = () => {
           <Typography variant='h2' className='bg-clip-text text-transparent bg-gradient-to-r from-web-light-blue from-35% to-web-blue to-80%'>
             Servidores
           </Typography>
-          <div className='w-full flex flex-wrap justify-center h-full gap-5 items-center'>
+          <div className='w-full flex flex-wrap justify-center h-full gap-5 md:gap-10 items-center'>
             {logosServer.map(logo =>
               <SkillsCard key={logo.id} alt={logo.alt} image={logo.logo} name={logo.name} />
             )}
