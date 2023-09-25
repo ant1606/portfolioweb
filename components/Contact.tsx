@@ -55,7 +55,12 @@ const Contact = () => {
           initialValues={initialValues}
           validate={validate}
           onSubmit={(values, actions) => {
-            emailjs.sendForm('service_s8qbubv', 'template_09dpchi', form.current as HTMLFormElement, 'YJWd6PBfNY7eF35dM')
+            emailjs.sendForm(
+              process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+              process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+              form.current as HTMLFormElement,
+              process.env.NEXT_PUBLIC_EMAILJS_PRIVATE_KEY as string
+            )
               .then((result) => {
                 toast.success('Gracias! Tu mensaje ha sido enviado.', {
                   position: toast.POSITION.TOP_RIGHT,
