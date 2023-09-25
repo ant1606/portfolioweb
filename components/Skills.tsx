@@ -15,7 +15,6 @@ import postmanLogo from '@/public/postman_logo.svg';
 import reactTestingLibraryLogo from '@/public/reacttestinglibrary_logo.svg';
 import digitalOceanLogo from '@/public/digitalocean_logo.svg';
 
-import SkillCarrousel from './SkillCarrousel';
 import SkillsCard from './SkillsCard';
 import Typography from './Typography';
 
